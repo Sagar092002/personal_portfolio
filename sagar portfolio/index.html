@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/157ff08378.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="image/logo.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <!-- <li><a href="#">Portfolio</a></li> -->
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-regular fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Java Developper</p>
+                <h1>Hi , I'm <span>Sagar</span> <br>  Pundir from India</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/sagar_image.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Aspiring Java Developer with a passion for web development and a strong foundation in object-oriented programming. Currently honing my skills by creating dynamic and interactive web applications. Eager to leverage my knowledge and enthusiasm for coding to contribute to innovative projects and collaborate with talented teams. Dedicated to continuous learning and professional growth in the tech industry. Let's connect and build something amazing together.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>JAVA</span><br>designing java</li>
+                            <li><span>Front-end</span><br>WEB DEVELOPMENT</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2025</span><br>Master of Computer Applications</li>
+                            <li><span>2020</span><br>B.Sc.(Computer Science)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents">
+                        <ul>
+                            <li><span>JAVA</span><br>designing java</li>
+                            <li><span>Front-end</span><br>WEB DEVELOPMENT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h1>WeB Designer</h1>
+                    <p>I'm currently learning Java and working on a web development project. It's exciting to apply my knowledge of Java to build dynamic and interactive web applications. This project is a great opportunity to enhance my skills in both backend and frontend development.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-crop-simple"></i>
+                    <h1>JAVA Developer</h1>
+                    <p>I'm currently learning Java and creating my own projects to put theory into practice. It's an exciting journey exploring object-oriented programming, building robust applications, and solving real-world problems. Every project is a new challenge and a step forward in my development career. </p>
+                    <a href="#">Learn More</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p><i class="fa-sharp fa-solid fa-paper-plane"></i>sagarpundir1978@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>9389609585</p>
+                    <div class="social-icons">
+                        
+                        <a href="https://github.com/Sagar092002"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sagar-pundir-b07543305/?trk=opento_sprofile_details"><i class="fa-brands fa-linkedin"></i></a>
+                        
+                    </div>
+                    <a href="image/resume.pdf" download class="btn btn2">Download resume</a>
+                </div>
+
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Enter your name" required>
+                        <input type="email" name="Email" placeholder="Enter your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn bnt2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© Sagar Pundir 2024. All rights reserved. No part of this portfolio may be reproduced without permission.</p>
+        </div>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName('tab-links');
+        var tabcontents=document.getElementsByClassName('tab-contents');
+        function opentab(tabname)
+        {
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemeu= doc.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+    <form name="submit-to-google-sheet">
+        <input name="email" type="email" placeholder="Email" required>
+        <button type="submit">Send</button>
+      </form>
+      
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxSUBQYdPiA67Up2y1VqAXaZ_RUa-6c6-UqNo7iQaJhuISUBQbOO2yPlBn4yiIsiFPu/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML= ""
+                },5000)
+                form.reset() 
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
